@@ -1,4 +1,4 @@
 Date-Baha-i
 ===========
 
-Convert to and from Baha'i dates
+Perl API module to convert to and from Baha'i dates.
