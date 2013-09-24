@@ -749,19 +749,9 @@ Here are some handy examples (newlines added for readability):
   short numeric:
   1/1/159
 
-  short numeric:
-  1/1/159
-
   long numeric:
   7th day of the week, 1st day of the 1st month, year 159,
   7th year of the 9th vahid of the 1st kull-i-shay, holy day: Naw Ruz
-
-  long numeric:
-  7th day of the week, 1st day of the 1st month, year 159,
-  7th year of the 9th vahid of the 1st kull-i-shay, holy day: Naw Ruz
-
-  short alpha:
-  Istiqlal, Baha of Baha, Abad of Baha
 
   short alpha
   Istiqlal, Baha of Baha, Abad of Baha
@@ -771,21 +761,8 @@ Here are some handy examples (newlines added for readability):
   year one hundred fifty nine of year Abad of the vahid Baha of the
   1st kull-i-shay, holy day: Naw Ruz
 
-  long alpha:
-  week day Istiqlal, day Baha of month Baha,
-  year one hundred fifty nine of year Abad of the vahid Baha of the
-  1st kull-i-shay, holy day: Naw Ruz
-
   short alpha-numeric:
   Istiqlal (7), Baha (1) of Baha (1), year 159, Abad (7) of Baha (9)
-
-  short alpha-numeric:
-  Istiqlal (7), Baha (1) of Baha (1), year 159, Abad (7) of Baha (9)
-
-  long alpha-numeric:
-  7th week day Istiqlal, 1st day Baha of the 1st month Baha,
-  year one hundred and fifty nine (159), 7th year Abad of the
-  9th vahid Baha of the 1st kull-i-shay, holy day: Naw Ruz
 
   long alpha-numeric:
   7th week day Istiqlal, 1st day Baha of the 1st month Baha,
