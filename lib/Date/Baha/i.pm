@@ -832,20 +832,13 @@ L<Lingua::EN::Numbers::Years>
 
 L<http://www.projectpluto.com/calendar.htm#bahai> (Very interesting)
 
-The following are partially quoted above:
-
-L<http://www.planetbahai.org/articles/2003/ar032103a.html>
-
-L<http://www.bahaindex.com/calendar.html>
-
 L<http://www.moonwise.co.uk/year/160bahai.htm>
 
 =head1 TO DO
 
-Base the date computation on the time of day (the Baha'i day begins at 
-sunset) with L<Astro::Sunrise>.
+Base the date computation on the time of day (Baha'i day begins at sunset).
 
-Make this a L<DateTime> module...
+Make this a L<DateTime> module.
 
 Support cycles and Kull-i-Shay.
 
