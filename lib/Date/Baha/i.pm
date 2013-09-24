@@ -16,7 +16,7 @@ use Date::Calc qw(
 use Lingua::EN::Numbers qw(num2en_ordinal);
 use Lingua::EN::Numbers::Years;
 
-use base 'Exporter';
+use parent 'Exporter';
 use vars qw(@EXPORT @EXPORT_OK);
 @EXPORT = @EXPORT_OK = qw(
     as_string
