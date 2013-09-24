@@ -2,7 +2,7 @@ package Date::Baha::i;
 
 # ABSTRACT: Convert to and from Baha'i dates
 
-our $VERSION = '0.1902';
+our $VERSION = '0.20';
 
 use strict;
 use warnings;
