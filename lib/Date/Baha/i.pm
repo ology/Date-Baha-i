@@ -7,15 +7,6 @@ our $VERSION = '0.1902';
 use strict;
 use warnings;
 
-use Date::Calc qw(
-    Add_Delta_Days
-    Date_to_Days
-    Day_of_Week
-    leap_year
-);
-use Lingua::EN::Numbers qw(num2en_ordinal);
-use Lingua::EN::Numbers::Years;
-
 use parent 'Exporter';
 use vars qw(@EXPORT @EXPORT_OK);
 @EXPORT = @EXPORT_OK = qw(
@@ -30,6 +21,15 @@ use vars qw(@EXPORT @EXPORT_OK);
     to_bahai
     years
 );
+
+use Date::Calc qw(
+    Add_Delta_Days
+    Date_to_Days
+    Day_of_Week
+    leap_year
+);
+use Lingua::EN::Numbers qw(num2en_ordinal);
+use Lingua::EN::Numbers::Years;
 
 # Set constants
 use constant FACTOR         =>   19;  # Everything is in groups of 19.
