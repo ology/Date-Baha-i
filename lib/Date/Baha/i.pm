@@ -86,10 +86,9 @@ use constant MONTH_DAY => qw(
     Ayyam-i-Ha
 );
 
-# NOTE: Trailing 0's are stripped, resulting in incorrect
-# computations if certain decimals are not quoted...
-# So I just quote everything.
-#   Month name   => [Number, Start, End],    # Non-leap year day span
+# NOTE: Trailing 0's are stripped, resulting in incorrect computation if
+# certain decimals are not quoted.
+# Month => [Number, Start, End]
 use constant MONTHS => {
     "Baha"       => [ 0,  '3.21',  '4.08'],  # 80,  98
     "Jalal"      => [ 1,  '4.09',  '4.27'],  # 99, 117
@@ -142,7 +141,6 @@ use constant HOLY_DAYS => {
     "Ascension of 'Abdu'l-Baha" => [ '11.28' ],
 };
 
-
 # List return functions
 sub cycles { return CYCLE_YEAR }
 sub years { return CYCLE_YEAR }
@@ -150,7 +148,6 @@ sub months { return MONTH_DAY }
 sub days { return (MONTH_DAY)[0 .. 18] }
 sub days_of_the_week { return DOW_NAME }
 sub holy_days { return HOLY_DAYS }
-
 
 sub to_bahai {
     my %args = @_;
@@ -185,7 +182,6 @@ sub to_bahai {
         %args
     );
 }
-
 
 sub from_bahai {
     my %args = @_;
