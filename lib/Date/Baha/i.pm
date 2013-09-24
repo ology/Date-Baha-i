@@ -138,12 +138,12 @@ use constant HOLY_DAYS => {
 };
 
 # List return functions
-sub cycles { return CYCLE_YEAR }
-sub years { return CYCLE_YEAR }
-sub months { return MONTH_DAY }
-sub days { return (MONTH_DAY)[0 .. 18] }
+sub cycles           { return CYCLE_YEAR }
+sub years            { return CYCLE_YEAR }
+sub months           { return MONTH_DAY }
+sub days             { return (MONTH_DAY)[0 .. 18] }
 sub days_of_the_week { return DOW_NAME }
-sub holy_days { return HOLY_DAYS }
+sub holy_days        { return HOLY_DAYS }
 
 sub to_bahai {
     my %args = @_;
