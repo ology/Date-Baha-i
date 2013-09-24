@@ -32,15 +32,15 @@ use Lingua::EN::Numbers qw(num2en_ordinal);
 use Lingua::EN::Numbers::Years;
 
 # Set constants
-use constant FACTOR         =>   19;  # Everything is in groups of 19.
-use constant FEBRUARY       =>    2;
-use constant MARCH          =>    3;
-use constant SHARAF         =>   16;
-use constant LAST_START_DAY =>    2;  # First day of the fast.
-use constant YEAR_START_DAY =>   21;  # Vernal equinox.
-use constant LEAP_START_DAY =>   26;  # The intercalary days.
-use constant FIRST_YEAR     => 1844;
-use constant ADJUST_YEAR    => 1900;
+use constant FACTOR         =>   19;  # Everything is in groups of 19
+use constant FEBRUARY       =>    2;  # Handy
+use constant MARCH          =>    3;  # Handy
+use constant SHARAF         =>   16;  # Handy
+use constant LAST_START_DAY =>    2;  # First day of the fast
+use constant YEAR_START_DAY =>   21;  # Vernal equinox
+use constant LEAP_START_DAY =>   26;  # The intercalary days
+use constant FIRST_YEAR     => 1844;  # Handy
+use constant ADJUST_YEAR    => 1900;  # Computation factor
 use constant CYCLE_YEAR => qw(
     Alif
     Ba
@@ -62,7 +62,6 @@ use constant CYCLE_YEAR => qw(
     Abha
     Vahid
 );
-
 use constant MONTH_DAY => qw(
     Baha
     Jalal
@@ -85,7 +84,6 @@ use constant MONTH_DAY => qw(
     'Ala
     Ayyam-i-Ha
 );
-
 # NOTE: Trailing 0's are stripped, resulting in incorrect computation if
 # certain decimals are not quoted.
 # Month => [Number, Start, End]
@@ -111,7 +109,6 @@ use constant MONTHS => {
     "Ayyam-i-Ha" => [-1,  '2.26',  '3.01'],  # 57,  60
     "'Ala"       => [18,  '3.02',  '3.20'],  # 61,  79
 };
-
 use constant DOW_NAME => qw(
     Jalal
     Jamal
@@ -121,7 +118,6 @@ use constant DOW_NAME => qw(
     Istijlal
     Istiqlal
 );
-
 use constant HOLY_DAYS => {
     # Work suspended':
     "Naw Ruz"                   => [  '3.21' ],
