@@ -1,8 +1,12 @@
 package Date::Baha::i;
 
+# ABSTRACT: Convert to and from Baha'i dates
+
 our $VERSION = '0.1902';
+
 use strict;
 use warnings;
+
 use Date::Calc qw(
     Add_Delta_Days
     Date_to_Days
@@ -11,6 +15,7 @@ use Date::Calc qw(
 );
 use Lingua::EN::Numbers qw(num2en_ordinal);
 use Lingua::EN::Numbers::Years;
+
 use base 'Exporter';
 use vars qw(@EXPORT @EXPORT_OK);
 @EXPORT = @EXPORT_OK = qw(
