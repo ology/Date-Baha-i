@@ -1,7 +1,6 @@
-#!/usr/bin/perl
-use strict;
-use warnings;
-use Test::More tests => 367;
+#!/usr/bin/env perl -T
+use Test::More;
+
 use Date::Calc qw(Delta_Days Add_Delta_Days);
 
 use_ok 'Date::Baha::i';
@@ -42,3 +41,5 @@ for(0 .. Delta_Days(@start, @stop)) {
         $day = 1;
     }
 }
+
+done_testing();
