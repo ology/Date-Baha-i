@@ -8,9 +8,6 @@ Date-Baha-i=~/sandbox/github/ology/Date-Baha-i CD=. {
   02-from_bahai.t
   03-misc.t
   04-to_bahai.t
-  boilerplate.t
-  pod-coverage.t
-  pod.t
  }
  Changes
  README.md
