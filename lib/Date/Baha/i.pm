@@ -319,7 +319,7 @@ sub to_bahai {
     my %args = @_;
 
     # Grab the ymd from the arguments if they have been passed in.
-    my($year, $month, $day) = @args{qw(year month day)};
+    my ($year, $month, $day) = @args{qw(year month day)};
     # Make sure we have a proper ymd before proceeding.
     ($year, $month, $day) = _ymd(
         %args,
@@ -328,14 +328,14 @@ sub to_bahai {
         day   => $day,
     );
 
-    my($bahai_month, $bahai_day);
+    my ($bahai_month, $bahai_day);
 
-    for(values %{ MONTHS() }) {
-        my($days, $lower, $upper) = _setup_date_comparison(
+    for (values %{ MONTHS() }) {
+        my ($days, $lower, $upper) = _setup_date_comparison(
             $year, $month, $day, @$_[1,2]
         );
 
-        if($days >= $lower && $days <= $upper) {
+        if ($days >= $lower && $days <= $upper) {
             $bahai_month = $_->[0];
             $bahai_day = $days - $lower;
             last;
@@ -373,7 +373,7 @@ sub from_bahai {
 
 sub as_string {
     # XXX With Lingua::EN::Numbers, naively assume that we only care about English.
-    my($date_hash, %args) = @_;
+    my ($date_hash, %args) = @_;
 
     $args{size}     = 1 unless defined $args{size};
     $args{numeric}  = 0 unless defined $args{numeric};
@@ -383,7 +383,7 @@ sub as_string {
 
     my $is_ayyam_i_ha = $date_hash->{month} == -1 ? 1 : 0;
 
-    if(!$args{size} && $args{numeric} && $args{alpha}) {
+    if (!$args{size} && $args{numeric} && $args{alpha}) {
         # short alpha-numeric
         $date .= sprintf '%s (%d), %s (%d) of %s (%d), year %d, %s (%d) of %s (%d)',
             @$date_hash{qw(
@@ -391,7 +391,7 @@ sub as_string {
                 year year_name cycle_year cycle_name cycle
             )};
     }
-    elsif($args{size} && $args{numeric} && $args{alpha}) {
+    elsif ($args{size} && $args{numeric} && $args{alpha}) {
         # long alpha-numeric
         # XXX Fugly hacking begins.
         my $month_string = $is_ayyam_i_ha ? '%s%s' : 'the %s month %s';
@@ -413,11 +413,11 @@ sub as_string {
             $date_hash->{cycle_name},
             num2en_ordinal($date_hash->{kull_i_shay});
     }
-    elsif(!$args{size} && $args{numeric}) {
+    elsif (!$args{size} && $args{numeric}) {
         # short numeric
         $date .= sprintf '%s/%s/%s', @$date_hash{qw(month day year)};
     }
-    elsif($args{size} && $args{numeric}) {
+    elsif ($args{size} && $args{numeric}) {
         # long numeric
         $date .= sprintf
             '%s day of the week, %s day of the %s month, year %s, %s year of the %s vahid of the %s kull-i-shay',
@@ -429,7 +429,7 @@ sub as_string {
             num2en_ordinal($date_hash->{cycle}),
             num2en_ordinal($date_hash->{kull_i_shay});
     }
-    elsif(!$args{size} && $args{alpha}) {
+    elsif (!$args{size} && $args{alpha}) {
         # short alpha
         $date .= sprintf '%s, %s of %s, %s of %s',
             @$date_hash{qw(
@@ -449,7 +449,7 @@ sub as_string {
             num2en_ordinal($date_hash->{kull_i_shay});
     }
 
-    if($date_hash->{holy_day} && $args{size}) {
+    if ($date_hash->{holy_day} && $args{size}) {
         $date .= ', holy day: ' . join '', keys %{ $date_hash->{holy_day} };
     }
 
@@ -457,7 +457,7 @@ sub as_string {
 }
 
 sub next_holy_day {
-    my($year, $month, $day) = @_;
+    my ($year, $month, $day) = @_;
 
     # Use today if we are not provided with a date.
     ($year, $month, $day) = _ymd(
@@ -475,8 +475,8 @@ sub next_holy_day {
     my $holy_date;
 
     # Find the first date greater than the one provided.
-    for(@sorted) {
-        if($m_d < $_) {
+    for (@sorted) {
+        if ($m_d < $_) {
             $holy_date = $_;
             last;
         }
@@ -496,20 +496,20 @@ sub next_holy_day {
 # Helper functions
 # Date comparison gymnastics.
 sub _setup_date_comparison {
-    my($y, $m, $d, $s, $e) = @_;
+    my ($y, $m, $d, $s, $e) = @_;
 
     # Dates are encoded as decimals.
-    my($start_month, $start_day) = split /\./, $s;
-    my($end_month, $end_day) = split /\./, $e;
+    my ($start_month, $start_day) = split /\./, $s;
+    my ($end_month, $end_day) = split /\./, $e;
 
     # Slide either the start or end year, given the month we're
     # looking at.
-    my($start_year, $end_year) = ($y, $y);
-    if($end_month < $start_month) {
-        if($m == $start_month) {
+    my ($start_year, $end_year) = ($y, $y);
+    if ($end_month < $start_month) {
+        if ($m == $start_month) {
             $end_year++;
         }
-        elsif($m == $end_month) {
+        elsif ($m == $end_month) {
             $start_year--;
         }
     }
@@ -521,7 +521,7 @@ sub _setup_date_comparison {
 }
 
 sub _build_date {
-    my($year, $month, $day, $new_month, $new_day, %args) = @_;
+    my ($year, $month, $day, $new_month, $new_day, %args) = @_;
 
     my %date;
     @date{qw(month day)} = ($new_month, $new_day);
@@ -573,15 +573,15 @@ sub _invert_holy_days {
 
     my %inverted;
 
-    while(my($name, $date) = each %{ HOLY_DAYS() }) {
+    while (my ($name, $date) = each %{ HOLY_DAYS() }) {
         $inverted{$date->[0]} = $name;
 
         # Does this date contain a day span?
-        if(@$date > 1) {
+        if (@$date > 1) {
             # Increment the Ayyam-i-Ha day if we are in a leap year.
             $date->[1]++ if $name eq 'Ayyam-i-Ha' && leap_year($year);
 
-            for(1 .. $date->[1] - 1) {
+            for (1 .. $date->[1] - 1) {
                 (undef, my $month, my $day) = Add_Delta_Days(
                     $year, split(/\./, $date->[0]), $_
                 );
