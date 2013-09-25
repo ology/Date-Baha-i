@@ -5,7 +5,7 @@ use Date::Calc qw(Delta_Days Add_Delta_Days);
 
 use_ok 'Date::Baha::i';
 
-# Test one Baha'i year.
+# Test Baha'i year.
 my @start = (2003, 3, 21);
 my @stop  = (2004, 3, 20);
 
@@ -13,7 +13,7 @@ my @stop  = (2004, 3, 20);
 my ($year, $month, $day, $max) = (160, 1, 1, 19);
 
 for (0 .. Delta_Days(@start, @stop)) {
-    # Increment our test sample date.
+    # Increment test date.
     my @x = Add_Delta_Days(@start, $_);
     my $x = sprintf '%4d/%02d/%02d', @x;
 
@@ -25,14 +25,14 @@ for (0 .. Delta_Days(@start, @stop)) {
     my $y = sprintf '%4d/%02d/%02d', @y;
     is $x, $y, "$x is $y";
 
-    # Increment our test control date.
+    # Increment test control date.
     $day++;
     if ($day > $max) {
         $day = 1;
         $month++;
         $month = 1 if $month > $max;
     }
-    # Hardcode for the 5 days of Ayyam-i-Ha.
+    # Hardcode for 5 days of Ayyam-i-Ha.
     if ($month == 19 && $day == 1) {
         $month = -1;
     }
