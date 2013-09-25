@@ -13,7 +13,5 @@ Date-Baha-i=~/sandbox/github/ology/Date-Baha-i CD=. {
   pod.t
  }
  Changes
- MANIFEST.SKIP
- Makefile.PL
- README
+ README.md
 }
