@@ -1,7 +1,7 @@
 Revision history for Date-Baha-i
 
 {{$NEXT}}
-    - Improved documentation.
+    - Purged documentation of religious cruft.
 
 0.1902  2010.06.09
     - Test with normalized date format to (hopefully) fix from_bahai.t.
@@ -22,7 +22,7 @@ Revision history for Date-Baha-i
 
 0.02  Wed Mar  5 2003
     - Used constants in place of mystery literals.
-    - Moved the final date computations to a seperate, private subroutine.
+    - Moved the final date computations to a separate, private subroutine.
     - Fixed feeble, broken test case.
 
 0.03  Wed Mar  5 2003
@@ -108,7 +108,7 @@ Revision history for Date-Baha-i
     - Oof.  Fixed the incorrect holy_day documentation.
 
 0.12  Sun May 18 2003
-    - Fixed a misnaming that would miscalulate the holy day in a leap year Ayyam-i-Ha.
+    - Fixed a misnaming that would miscalculate the holy day in a leap year Ayyam-i-Ha.
     - Fixed the start date for the Ayyam-i-Ha HOLY_DAYS entry.
     - Changed "timestamp" to "epoch".
     - Renamed the date function to "to_bahai" and added sub date { goto &to_bahai }.
@@ -132,7 +132,7 @@ Revision history for Date-Baha-i
 
 0.13  Sun May 25 2003
     - Deprecated (i.e. removed) the sub date.
-    - Fixed a sematic error in the "short alpha" clause of the as_string function.
+    - Fixed a semantic error in the "short alpha" clause of the as_string function.
     - Removed the dow number from the "short numeric" as_string output.
     - Changed the [month, day] HOLY_DAYS value to ['month.day'].
     - Fixed the _invert_holy_days function accordingly.
