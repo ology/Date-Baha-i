@@ -10,6 +10,8 @@ Date::Baha::i - Convert to and from Baha'i dates
 
 =head1 SYNOPSIS
 
+  perl -MDate::Baha::i -le'print scalar from_bahai(epoch=>time)'
+
   use Date::Baha'i;
 
   $bahai_date = to_bahai();
