@@ -1,7 +1,8 @@
 Revision history for Date-Baha-i
 
 {{$NEXT}}
-    - Purged documentation of religious cruft.
+    - Removed documentation cruft.
+    - Removed accidental example duplication.
 
 0.1902  2010.06.09
     - Test with normalized date format to (hopefully) fix from_bahai.t.
