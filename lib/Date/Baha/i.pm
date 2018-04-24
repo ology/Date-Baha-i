@@ -103,7 +103,7 @@ use constant ADJUST_YEAR    => 1900;  # Year factor
 Each cycle of nineteen years is called a Vahid.  Nineteen cycles constitute a
 period called Kull-i-Shay.
 
-The names of the years in each cycle are: 
+The names of the years in each cycle are:
 
   1.  Alif   - The Letter "A"
   2.  Ba     - The letter "B"
