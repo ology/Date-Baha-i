@@ -55,7 +55,7 @@ Date::Baha::i - Convert to and from Baha'i dates
 =head1 DESCRIPTION
 
 This package renders the Baha'i date from two standard date formats -
-epoch time and a (year, month, day) triple.  It also converts a Baha'i 
+epoch time and a (year, month, day) triple.  It also converts a Baha'i
 date to standard ymd format.
 
 =cut
