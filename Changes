@@ -1,6 +1,8 @@
 Revision history for Date-Baha-i
 
 {{$NEXT}}
+
+0.1903 2014-09-18
     - Removed documentation cruft.
     - Removed accidental example duplication.
     - Added a commandline example.
