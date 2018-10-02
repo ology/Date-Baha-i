@@ -1,6 +1,8 @@
 Revision history for Date-Baha-i
 
 {{$NEXT}}
+
+0.2100 2018-10-02 15:16:33
     - Fixed as_string() short-numeric date output order.
 
 0.2001 2018-10-02 14:53:44
