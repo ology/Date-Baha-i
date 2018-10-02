@@ -2,6 +2,7 @@ Revision history for Date-Baha-i
 
 {{$NEXT}}
     - Fix SYNOPSIS section.
+    - Fix short-numeric elsif condition.
 
 0.1903 2014-09-18
     - Removed documentation cruft.
