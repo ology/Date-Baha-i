@@ -2,11 +2,7 @@ package Date::Baha::i;
 
 # ABSTRACT: Convert to and from Baha'i dates
 
-our $VERSION = '0.2000';
-
-=head1 NAME
-
-Date::Baha::i - Convert to and from Baha'i dates
+our $VERSION = '0.2001';
 
 =head1 SYNOPSIS
 
@@ -32,7 +28,7 @@ Date::Baha::i - Convert to and from Baha'i dates
       day   => $day,
   );
 
-  my($bahai_year, $bahai_month, $bahai_day) = ('...', '...', '...');
+  my($bahai_year, $bahai_month, $bahai_day) = (175, 11, 6);
 
   my $date = from_bahai(
       year  => $bahai_year,
