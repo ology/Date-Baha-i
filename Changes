@@ -4,6 +4,7 @@ Revision history for Date-Baha-i
     - Fixed SYNOPSIS section.
     - Fixed short-numeric elsif condition.
     - Added tests!
+    - Use the github Artistic 2.0 license.
 
 0.1903 2014-09-18
     - Removed documentation cruft.
