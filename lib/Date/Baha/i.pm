@@ -2,7 +2,7 @@ package Date::Baha::i;
 
 # ABSTRACT: Convert to and from Baha'i dates
 
-our $VERSION = '0.2001';
+our $VERSION = '0.2100';
 
 =head1 SYNOPSIS
 
@@ -418,7 +418,7 @@ sub as_string {
     }
     elsif (!$args{size} && $args{numeric} && !$args{alpha}) {
         # short numeric
-        $date .= sprintf '%s/%s/%s', @$date_hash{qw(month day year)};
+        $date .= sprintf '%s/%s/%s', @$date_hash{qw(year month day)};
     }
     elsif ($args{size} && $args{numeric}) {
         # long numeric
@@ -720,7 +720,7 @@ representations on or off.  The defaults are as follows:
 Here are some handy examples (newlines added for readability):
 
   short numeric:
-  1/1/159
+  159/11/6  # year/month/day
 
   long numeric:
   7th day of the week, 1st day of the 1st month, year 159,
