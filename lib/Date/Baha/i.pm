@@ -10,11 +10,13 @@ Date::Baha::i - Convert to and from Baha'i dates
 
 =head1 SYNOPSIS
 
-  perl -MDate::Baha::i -le'%d = to_bahai(); print as_string(\%d)'
+  # perl -MDate::Baha::i -le'%d = to_bahai(); print as_string(\%d)'
 
   use Date::Baha'i;
 
-  $bahai_date = to_bahai();
+  my($year, $month, $day) = (2018, 10, 2);
+
+  my $bahai_date = to_bahai();
   $bahai_date = to_bahai(epoch => time);
   $bahai_date = to_bahai(
       year  => $year,
@@ -22,7 +24,7 @@ Date::Baha::i - Convert to and from Baha'i dates
       day   => $day,
   );
 
-  %bahai_date = to_bahai();
+  my %bahai_date = to_bahai();
   %bahai_date = to_bahai(epoch => time);
   %bahai_date = to_bahai(
       year  => $year,
@@ -30,7 +32,9 @@ Date::Baha::i - Convert to and from Baha'i dates
       day   => $day,
   );
 
-  $date = from_bahai(
+  my($bahai_year, $bahai_month, $bahai_day) = ('...', '...', '...');
+
+  my $date = from_bahai(
       year  => $bahai_year,
       month => $bahai_month,
       day   => $bahai_day,
@@ -45,12 +49,12 @@ Date::Baha::i - Convert to and from Baha'i dates
   $day = next_holy_day();
   $day = next_holy_day($year, $month, $day);
 
-  @cycles = cycles();
-  @years = years();
-  @months = months();
-  @days = days();
+  my @cycles = cycles();
+  my @years = years();
+  my @months = months();
+  my @days = days();
   @days = days_of_the_week();
-  %days = holy_days();
+  my %days = holy_days();
 
 =head1 DESCRIPTION
 
