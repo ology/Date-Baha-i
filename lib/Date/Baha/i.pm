@@ -805,8 +805,6 @@ L<http://calendar.bahaiq.com/>
 
 =head1 TO DO
 
-Re-create the missing 01-as_string.t, 03-misc.t & 04-to_bahai.t tests!
-
 Base the date computation on the time of day (Baha'i day begins at sunset).
 
 Make this a L<DateTime> module.
