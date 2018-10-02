@@ -232,6 +232,7 @@ use constant MONTHS => {
 =head2 DAY NAMES
 
 The days of the Baha'i week are:
+
   1. Jalal    - Glory (Saturday)
   2. Jamal    - Beauty (Sunday)
   3. Kaml     - Perfection (Monday)
