@@ -2,7 +2,7 @@ package Date::Baha::i;
 
 # ABSTRACT: Convert to and from Baha'i dates
 
-our $VERSION = '0.1903';
+our $VERSION = '0.2000';
 
 =head1 NAME
 
@@ -415,7 +415,7 @@ sub as_string {
             $date_hash->{cycle_name},
             num2en_ordinal($date_hash->{kull_i_shay});
     }
-    elsif (!$args{size} && $args{numeric}) {
+    elsif (!$args{size} && $args{numeric} && !$args{alpha}) {
         # short numeric
         $date .= sprintf '%s/%s/%s', @$date_hash{qw(month day year)};
     }
