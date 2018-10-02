@@ -33,7 +33,7 @@ $s = as_string( \%d,
     numeric => 1,
     size    => 0,
 );
-$expected = "11/6/175";
+$expected = "175/11/6";
 is $s, $expected, 'as_string';
 
 $s = as_string( \%d,
