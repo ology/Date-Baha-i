@@ -795,13 +795,13 @@ Dates are given in common, standard (non-Baha'i) format.
 
 L<Date::Calc>
 
+L<Exporter>
+
 L<Lingua::EN::Numbers>
 
 L<Lingua::EN::Numbers::Years>
 
-L<http://www.projectpluto.com/calendar.htm#bahai>
-
-L<http://www.moonwise.co.uk/year/160bahai.htm>
+L<http://calendar.bahaiq.com/>
 
 =head1 TO DO
 
