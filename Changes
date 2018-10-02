@@ -1,6 +1,7 @@
 Revision history for Date-Baha-i
 
 {{$NEXT}}
+    - Fix SYNOPSIS section.
 
 0.1903 2014-09-18
     - Removed documentation cruft.
