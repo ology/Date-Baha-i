@@ -1,4 +1,4 @@
-#!/usr/bin/env perl -T
+#!/usr/bin/env perl
 use Test::More;
 
 use Date::Calc qw(Delta_Days Add_Delta_Days);
